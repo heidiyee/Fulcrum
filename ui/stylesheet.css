@@ -1,0 +1,322 @@
+html {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+    font-family: "Brown Standard", sans-serif;
+    font-weight: bold;
+    color: #262628;
+}
+
+section {
+    padding: 5.8em 2em 5.0em;
+}
+
+h2 {
+    font-size: 1.2em;
+    color: #969598;
+}
+
+h3 {
+    font-size: 2.1em;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font-family: "Domaine Text", sans-serif;
+    font-size: 1.4em;
+}
+
+
+
+/******************************
+        links with icons
+******************************/
+.link-chevron-right {
+    color: #DD2222;
+    letter-spacing: 0.2em;
+    display: block;
+    text-align: left;
+    font-size: 1.2em;
+}
+
+.link-chevron-right:after {
+    font-family: 'icomoon' !important;
+    font-size: 0.8em;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    content: "\e909";
+    padding: 0 1.6em;
+}
+
+.link-down-arrow {
+
+}
+
+.link-down-arrow:after {
+    font-family: 'icomoon' !important;
+    font-size: 1.8em;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    content: "\e907";
+}
+
+.link-right-arrow {
+    color: #DD2222;
+}
+
+.link-right-arrow:after {
+    font-family: 'icomoon' !important;
+    font-size: 0.5em;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    content: "\e905";
+    padding: 0 1.6em;
+}
+
+nav {
+    position: relative;
+    display: block;
+    height: 100vh;
+    padding: 0 2em 0 2em;
+    /*box-shadow: 1px 1px 1px #ccc;*/
+    /*background-color: #000;*/
+    background-image: url("../assets/home-littlegirl-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+    nav img {
+        display: inline-block;
+        width: auto;
+        height: 53px;
+        float: left;
+    }
+
+#nav-icon {
+    display: inline-block;
+    position: relative;
+    float: right;
+    width: 20px;
+    height: 14px;
+    margin: 27px 0;
+}
+    #nav-icon span {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #fff;
+    }
+
+    #nav-icon span:nth-child(1) {
+        top: 0px;
+    }
+
+    #nav-icon span:nth-child(2),#nav-icon span:nth-child(3) {
+        top: 6px;
+    }
+
+    #nav-icon span:nth-child(4) {
+        top: 12px;
+    }
+
+.header-text {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 9em;
+}
+
+
+    .header-text h2 {
+        font-family: "Domaine Display", sans-serif;
+        font-weight: 300;
+        color: #fff;
+        font-size: 3.2em;
+        /*h2 is coming off page so added padidng to the right*/
+        padding-right: 1em;
+    }
+
+    .header-text p {
+        font-size: 1.2em;
+        color: #fff;
+        text-align: left;
+        padding: 3em 0;
+    }
+
+    .header-text img {
+        clear: left;
+        height: 1em;
+        width: 1em;
+    }
+    .header-text a {
+        color: #fff;
+    }
+
+    .header-text .link-chevron-right {
+        padding: 2.0em 0;
+    }
+
+.spotlight-slides {
+    padding: 0;
+}
+
+    .spotlight-slides img {
+        width: 100%;
+        padding: 3.0em 0;
+    }
+
+    .spotlight-slides p {
+        padding: 1.93em 0;
+    }
+
+    .spotlight-slides a {
+        padding-bottom: 1.6em;
+    }
+
+.dot-slider .dot {
+    display: inline-block;
+    font-size: 3.4em;
+    color: #D1D3D4;
+}
+
+.grants-and-programs {
+    background-color: #38393F;
+    background-image: url("../assets/grid-background.svg");
+    background-size: 1200px 800px, contain;
+    background-position: center left;
+    color: #fff;
+}
+
+    .grants-and-programs h2, a {
+        color: #fff;
+    }
+
+    .grants-and-programs h3 {
+        color: #fff;
+        padding-top: 1.5em;
+        padding-right: 3em;
+        font-family: "Domaine Display", sans-serif;
+        font-size: 2.4em;
+    }
+
+.upcoming-events .row-container:nth-child(1){
+    padding-bottom: 4em;
+}
+
+
+.row-container > * {
+    vertical-align: top;
+}
+
+.row-container h2 {
+    margin-bottom: 2em;
+}
+
+.column-one {
+    width: 15.0em;
+    display: inline-block;
+}
+
+    .column-one img {
+        width: 100%;
+    }
+
+.column-two {
+    width: -webkit-calc(100% - 1.2em - 150px);
+    display: inline-block;
+    padding-left: 1.2em;
+}
+
+    .column-two a {
+        padding: 2.0em 0;
+    }
+
+.date {
+    border: 1px solid #262628;
+}
+
+p.month {
+
+    font-family: "Brown Standard", sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    display: inline-block;
+    padding: 0.8em;
+    letter-spacing: .2em;
+    transform: rotate(270deg);
+    vertical-align: text-bottom;
+}
+
+p.day {
+    font-size: 3.6em;
+    display: inline-block;
+    border-left: 1px solid #262628;
+    padding: 0.75em;
+}
+
+footer {
+    font-family: "Brown Standard", sans-serif;
+    font-weight: bold;
+    text-align: left;
+    font-size: 1.2em;
+    height: 200px;
+    background-color: #262628;
+    padding: 3.6em 2em 2.6em 2em;
+    color: #DD2222;
+}
+
+    footer > * {
+        font-family: "Brown Standard", sans-serif;
+    }
+
+    footer > a {
+        letter-spacing: 0.2em;
+    }
+
+    footer p {
+        font-size: 1.2em;
+        font-weight: normal;
+        color: #555C6C;
+    }
+
+    footer .icons {
+        font-size: 2.4em;
+        padding: 1em 0;
+    }

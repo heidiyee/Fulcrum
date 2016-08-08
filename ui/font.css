@@ -57,6 +57,10 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-search-icon:before {
+  content: "\e90a";
+}
+
 .icon-right-arrow:before {
     content: "\e905";
 }

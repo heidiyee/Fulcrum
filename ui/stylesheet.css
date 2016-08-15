@@ -19,6 +19,7 @@ body.fixed {
 
 section {
     padding: 5.8em 2em 5.0em;
+    background-color: #fff;
 }
 
 h2 {
@@ -39,121 +40,12 @@ p {
     font-size: 1.4em;
 }
 
-
-
-
-/******************************
-        links with icons
-******************************/
-.link-chevron-right {
-    color: #DD2222;
-    letter-spacing: 0.2em;
-    display: block;
-    text-align: left;
-    font-size: 1.2em;
-}
-
-.link-chevron-right:after {
-    font-family: 'icomoon' !important;
-    font-size: 0.8em;
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
-    content: "\e909";
-    padding: 0 1.6em;
-}
-
-.link-down-arrow {
-
-}
-
-.link-down-arrow:after {
-    font-family: 'icomoon' !important;
-    font-size: 1.8em;
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
-    content: "\e907";
-}
-
-.link-right-arrow {
-    color: #DD2222;
-}
-
-.link-right-arrow:after {
-    font-family: 'icomoon' !important;
-    font-size: 0.5em;
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
-    content: "\e905";
-    padding: 0 1.6em;
-}
-
-.link-left-arrow:before {
-    font-family: 'icomoon' !important;
-    font-size: 0.8em;
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    content: "\e908";
-    padding-right: 1em;
-}
-
-.link-search:after {
-    font-family: 'icomoon' !important;
-    font-size: 0.8em;
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    content: "\e90a";
-    padding: 0 1em;
-}
-
-nav {
-    position: relative;
+.hero {
     display: block;
     height: 100vh;
     padding: 0 2em 0 2em;
-    /*box-shadow: 1px 1px 1px #ccc;*/
+    width: 100%;
+
     /*background-color: #000;*/
     background-image: url("../assets/home-littlegirl-background.jpg");
     background-size: cover;
@@ -161,28 +53,80 @@ nav {
     background-position: center center;
 }
 
-    nav img {
+.wrapper {
+    position: relative;
+}
+
+.nav-bar {
+    width: 100%;
+    position: fixed;
+    display: block;
+    z-index: 3;
+    height: 66px;
+    padding: 0 2em 0 2em;
+
+    transition: background 1s;
+    -webkit-transition: background 1s;
+    -moz-transition: background 1s;
+    -o-transition: background 1s;
+}
+
+    .nav-bar h1 {
+    }
+
+    .nav-bar img {
+        position: fixed;
         display: inline-block;
         width: auto;
         height: 53px;
         float: left;
+        z-index: 3;
+    }
+
+    .nav-bar.sticky {
+        /*position: relative;*/
+        background: #fff;
+        box-shadow: 1px 1px 1px #ccc;
+        width: 100%;
+        top: 0;
+        left: 0;
+
+
+        transition: background 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+        -webkit-transition: background 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+        -moz-transition: background 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+        -o-transition: background 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+    }
+
+    .nav-bar.sticky #nav-icon span {
+        background: #969598;
+    }
+
+    .nav-bar.sticky.black {
+        background: #000;
+        box-shadow: none;
+    }
+
+    .nav-bar.sticky.black #nav-icon span {
+        background: #fff;
     }
 
 #nav-links {
-    position: absolute;
+    position: fixed;
     overflow: auto;
     width: 100%;
     height: 0;
     right: 0;
     left: 0;
     top: 0;
+    opacity: 0;
     background: #000;
     padding: 0 2em;
 
-    transition: .25s ease-in-out;
-    -webkit-transition: .25s ease-in-out;
-    -moz-transition: .25s ease-in-out;
-    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in;
+    -webkit-transition: .25s ease-in;
+    -moz-transition: .25s ease-in;
+    -o-transition: .25s ease-in;
 }
 
     #nav-links ul {
@@ -200,21 +144,19 @@ nav {
         font-size: 1em;
     }
 
-    #nav-links img {
-        display: inline-block;
-        width: auto;
-        height: 53px;
-        float: left;
-    }
-
-    #nav-links .link-chevron-right {
+    #nav-links .donate-link {
         position: absolute;
         bottom: 0;
         left: 0;
         width: 100%;
-        padding: 2em 0;
+        padding: 2em 0 3em 0;
         text-align: center;
         background-color: #DD2222;
+    }
+
+    #nav-links .link-chevron-right {
+        position: absolute;
+        display: inline-block;
         color: #fff;
     }
 
@@ -228,7 +170,7 @@ nav {
         /*width: 100%;*/
     }
 
-    #nav-links #about, #nav-links #why, #nav-links #grants, #nav-links #get-involved {
+    #nav-links .second-level {
         /*display: none;*/
         position: fixed;
         display: block;
@@ -252,25 +194,32 @@ nav {
 This is for toggling the menu
 ********************************/
 #nav-links.popup {
-    height: 100%;
+    height: 100vh;
     position: fixed;
     z-index: 2;
+    opacity: 1;
+
+    transition: all 0.25s ease-in-out;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
 }
 
-    #nav-links.popup #about, #nav-links.popup #why, #nav-links.popup #grants, #nav-links.popup #get-involved {
-        z-index: 1;
+    #nav-links.popup .second-level {
+        z-index: 2;
     }
 
-
-
+    #nav-links.popup span {
+        background: #fff;
+    }
 
 
 /* Menu icon */
 #nav-icon {
     display: inline-block;
-    position: relative;
-    float: right;
-    right: 0;
+    position: fixed;
+    /*float: right;*/
+    right: 2em;
     width: 20px;
     height: 53px;
 
@@ -318,7 +267,7 @@ This is for toggling the menu
     }
 
     #nav-icon.open {
-        position: fixed;
+        /*position: fixed;*/
         z-index: 3;
         right: 2em;
     }
@@ -349,11 +298,135 @@ This is for toggling the menu
         left: 50%;
     }
 
+/******************************
+        links with icons
+******************************/
+.link-chevron-right {
+    color: #DD2222;
+    letter-spacing: 0.2em;
+    display: block;
+    text-align: left;
+    font-size: 1.2em;
+}
+
+    .link-chevron-right:after {
+        font-family: 'icomoon' !important;
+        font-size: 0.8em;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+
+        content: "\e909";
+        padding-left: 1em;
+    }
+
+    .link-down-arrow {
+
+    }
+
+    .link-down-arrow:after {
+        font-family: 'icomoon' !important;
+        font-size: 1.8em;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+
+        content: "\e907";
+    }
+
+    .link-right-arrow {
+        color: #DD2222;
+    }
+
+    .link-right-arrow:after {
+        font-family: 'icomoon' !important;
+        font-size: 0.5em;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+
+        content: "\e905";
+        padding-left: 1em;
+    }
+
+    .link-left-arrow:before {
+        font-family: 'icomoon' !important;
+        font-size: 0.8em;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        content: "\e908";
+        padding-right: 1em;
+    }
+
+    .link-search:after {
+        font-family: 'icomoon' !important;
+        font-size: 0.8em;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        content: "\e90a";
+        padding-left: 1em;
+
+    }
+
+    /****** Animating the pseudo elements for icon links ********/
+    .link-chevron-right:after, .link-right-arrow:after, .link-search:after {
+        transition: all .25s linear;
+        -webkit-transition: all .25s linear;
+        -moz-transition: all .25s linear;
+        -o-transition: all .25s linear;
+    }
+
+    .link-chevron-right:hover:after, .link-right-arrow:hover:after, .link-search:hover:after {
+        padding-left: 2em;
+    }
+
+    /*#nav-links .link-chevron-right:hover::after {
+        transform: translateX(20%);
+    }*/
+
+
 
 .header-text {
     position: absolute;
     bottom: 0;
-    margin-bottom: 9em;
+    margin-bottom: 4em;
 }
 
     .header-text h2 {
@@ -465,7 +538,6 @@ This is for toggling the menu
 }
 
 p.month {
-
     font-family: "Brown Standard", sans-serif;
     font-weight: bold;
     font-size: 1.2em;
@@ -474,6 +546,8 @@ p.month {
     letter-spacing: .2em;
     transform: rotate(270deg);
     vertical-align: text-bottom;
+
+    z-index: -1;
 }
 
 p.day {
@@ -546,4 +620,136 @@ Media query for iphone 4s
       #nav-links .link-chevron-right {
           padding: 1em 0;
       }
+}
+
+
+@media only screen and (min-width: 1050px) {
+    .nav-bar {
+        height: 100px;
+
+        transition: all 0.25s linear;
+        -webkit-transition: all 0.25s linear;
+        -moz-transition: all 0.25s linear;
+        -o-transition: all 0.25s linear;
+    }
+
+    .nav-bar img{
+        position: static;
+        height: 76px;
+    }
+
+        .nav-bar.sticky {
+            transition: all 0.25s linear;
+            -webkit-transition: all 0.25s linear;
+            -moz-transition: all 0.25s linear;
+            -o-transition: all 0.25s linear;
+        }
+
+        .nav-bar.sticky #nav-links li, .nav-bar.sticky #nav-links a {
+            color: #969598;
+        }
+
+        .nav-bar.sticky #nav-links .link-chevron-right {
+            color: #fff;
+        }
+
+        .nav-bar.border-active {
+            box-shadow: 0 42px #38393F;
+
+            transition: all 0.25s linear;
+            -webkit-transition: all 0.25s linear;
+            -moz-transition: all 0.25s linear;
+            -o-transition: all 0.25s linear;
+        }
+
+
+    #nav-icon {
+        display: none;
+    }
+
+    #nav-links {
+        position: static;
+        text-align: center;
+        /*display: inline-block;*/
+        opacity: 1;
+        width: auto;
+        padding: 2em 0;
+        background: none;
+        height: auto;
+        left: auto;
+        right: auto;
+        top: auto;
+        font-weight: normal;
+    }
+
+    #nav-links ul {
+        display: inline-block;
+        margin: 0;
+    }
+
+    #nav-links ul li {
+        display: inline-block;
+        font-size: 1.4em;
+        margin: 0 1em;
+    }
+
+    #nav-links ul ul li {
+        font-size: 1em;
+    }
+
+    #nav-links #first-level {
+        display: inline-block;
+        padding: 2.8em 0;
+        /*margin-left: auto;
+        margin-right: auto;*/
+    }
+
+    #nav-links .donate-link {
+        position: static;
+        display: inline-block;
+        text-align: left;
+        float: right;
+        bottom: auto;
+        left: auto;
+        width: 12.8em;
+        padding: 2em;
+        right: 0;
+    }
+
+    #nav-links .link-chevron-right {
+        position: static;
+    }
+
+    #nav-links .second-level {
+        /*position: static;*/
+        opacity: 0;
+        height: 0;
+        display: block;
+        overflow: hidden;
+        width: 100vw;
+        margin-top: 0;
+        left: 0;
+        top: 100px;
+        /*background: #38393F;*/
+        text-align: center;
+        font-size: 14px;
+
+
+        transition: opacity 1s ease;
+        -webkit-transition: opacity 1s ease;
+        -moz-transition: opacity 1s ease;
+        -o-transition: opacity 1s ease;
+    }
+
+    #nav-links .second-level.active {
+        opacity: 1;
+        height: auto;
+        padding: 1em 0;
+    }
+
+    #nav-links .back, #nav-links .list-title {
+        display: none;
+    }
+
+
 }

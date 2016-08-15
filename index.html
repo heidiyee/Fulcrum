@@ -9,27 +9,20 @@
         <link rel="stylesheet" href="ui/stylesheet.css" media="screen" />
     </head>
     <body>
-        <nav>
-            <h1><img src="assets/fulcrumlogo.svg" alt="Fulcrum Foundation"/></h1>
+        <nav class="nav-bar">
+            <h1></h1>
+            <img class="logo-image" src="assets/fulcrumlogo.svg" alt="Fulcrum Foundation"/>
             <div id="nav-icon">
                 <span></span>
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-            <div class="header-text">
-                <h2>
-                    Leveraging Support for Catholic Schools
-                </h2>
-                <a href="#" class="link-chevron-right">LEARN MORE</a>
-                <a href="#" class="link-down-arrow"></a>
-            </div>
 
             <div id="nav-links">
-                <img src="assets/fulcrumlogo-inverted.svg" alt="Fulcrum Foundation"/>
                 <ul id="first-level">
                     <li><a href="#about">About</a>
-                        <ul id="about">
+                        <ul class="second-level" id="about">
                             <li class="list-title">About</li>
                             <li>History</li>
                             <li>Mission</li>
@@ -40,7 +33,7 @@
                         </ul>
                     </li>
                     <li><a href="#why">Why</a>
-                        <ul id="why">
+                        <ul class="second-level" id="why">
                             <li class="list-title">Why</li>
                             <li>Impact</li>
                             <li>Access to Assitance</li>
@@ -50,7 +43,7 @@
                         </ul>
                     </li>
                     <li><a href="#grants">Grants &amp; Programs</a>
-                        <ul id="grants">
+                        <ul class="second-level" id="grants">
                             <li class="list-title">Grants &amp; Programs</li>
                             <li>Tuition Assistance</li>
                             <li>School Partnerships</li>
@@ -59,7 +52,7 @@
                         </ul>
                     </li>
                     <li><a href="#get-involved">Get Involved</a>
-                        <ul id="get-involved">
+                        <ul class="second-level" id="get-involved">
                             <li class="list-title">Get Involved</li>
                             <li>Events</li>
                             <li>Celebration of Light</li>
@@ -72,11 +65,21 @@
                     <li>Contact Us</li>
                     <li class="link-search">Search</li>
                 </ul>
-
-                <a href="#" class="link-chevron-right">Donate</a>
+                <div class="donate-link">
+                    <a href="#" class="link-chevron-right">Donate</a>
+                </div>
             </div>
-
         </nav>
+
+        <section class="hero">
+            <div class="header-text">
+                <h2>
+                    Leveraging Support for Catholic Schools
+                </h2>
+                <a href="#" class="link-chevron-right">LEARN MORE</a>
+                <a href="#" class="link-down-arrow"></a>
+            </div>
+        </section>
 
         <section class="spotlight">
             <h2>SPOTLIGHT</h2>
@@ -151,7 +154,8 @@
 
         <script src="ui/jquery-3.0.0.min.js"></script>
         <script src="ui/menu.js"></script>
-        <script src="ui/scroll.js"></script>
+        <script src="ui/slider.js"></script>
+        <script src="ui/stickyNav.js"></script>
 
     </body>
 </html>

@@ -218,7 +218,6 @@ This is for toggling the menu
 #nav-icon {
     display: inline-block;
     position: fixed;
-    /*float: right;*/
     right: 2em;
     width: 20px;
     height: 53px;
@@ -267,8 +266,7 @@ This is for toggling the menu
     }
 
     #nav-icon.open {
-        /*position: fixed;*/
-        z-index: 3;
+        z-index: 4;
         right: 2em;
     }
 
@@ -282,6 +280,7 @@ This is for toggling the menu
         -webkit-transform: rotate(45deg);
         -moz-transform: rotate(45deg);
         -o-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
         transform: rotate(45deg);
     }
 
@@ -289,6 +288,7 @@ This is for toggling the menu
         transform: rotate(-45deg);
         -webkit-transform: rotate(-45deg);
         -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
         -o-transform: rotate(-45deg);
     }
 
@@ -745,6 +745,7 @@ Media query for iphone 4s
         opacity: 1;
         height: auto;
         padding: 1em 0;
+        left: 0;
     }
 
     #nav-links .back, #nav-links .list-title {

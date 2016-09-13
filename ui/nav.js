@@ -50,15 +50,12 @@ var listSlider = function () {
                 $(target).addClass("active");
             }
         } else {
-            //$("#first-level").animate({left: "0"}, "fast");
             var second = $(".second-level");
-            //console.log(second);
             if ($(target).hasClass("active")) {
                 $(target).removeClass("active");
                 $(".nav-bar").removeClass("border-active");
             } else {
                 if (second.hasClass("active")) {
-                    console.log("removed");
                     second.removeClass("active");
                 }
                 $(".nav-bar").addClass("border-active");
@@ -77,6 +74,7 @@ var navReset = function() {
     $(window).resize(function() {
         var windowWidth = $(window).width();
         if (windowWidth > "1050") {
+            console.log("I hate IE");
             $("#first-level").css("left", "0");
             $(".second-level").css("left", "0");
             if($("#nav-icon").hasClass("open")) {

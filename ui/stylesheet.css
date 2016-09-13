@@ -167,7 +167,6 @@ p {
     #nav-links #first-level {
         position: relative;
         display: block;
-        /*width: 100%;*/
     }
 
     #nav-links .second-level {
@@ -700,8 +699,7 @@ Media query for iphone 4s
     #nav-links #first-level {
         display: inline-block;
         padding: 2.8em 0;
-        /*margin-left: auto;
-        margin-right: auto;*/
+        left: 0;
     }
 
     #nav-links .donate-link {
@@ -730,7 +728,6 @@ Media query for iphone 4s
         margin-top: 0;
         left: 0;
         top: 100px;
-        /*background: #38393F;*/
         text-align: center;
         font-size: 14px;
 
@@ -745,7 +742,7 @@ Media query for iphone 4s
         opacity: 1;
         height: auto;
         padding: 1em 0;
-        left: 0;
+        left: 1em;
     }
 
     #nav-links .back, #nav-links .list-title {

@@ -150,7 +150,6 @@ p {
         left: 0;
         width: 100%;
         padding: 2em 0 3em 0;
-        text-align: center;
         background-color: #DD2222;
     }
 
@@ -158,6 +157,7 @@ p {
         position: absolute;
         display: inline-block;
         color: #fff;
+        margin: 0 calc((100% - 67px)/2);
     }
 
 

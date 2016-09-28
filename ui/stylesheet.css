@@ -2,6 +2,8 @@ html {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  height: 100%;
+  min-height: 100%;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -11,6 +13,8 @@ body {
     font-family: "Brown Standard", sans-serif;
     font-weight: bold;
     color: #262628;
+    height: 100%;
+    min-height: 100%;
 }
 
 body.fixed {
@@ -42,7 +46,8 @@ p {
 
 .hero {
     display: block;
-    height: 100vh;
+    height: 100%;
+    min-height: 100%;
     padding: 0 2em 0 2em;
     width: 100%;
 
@@ -64,6 +69,8 @@ p {
     z-index: 3;
     height: 66px;
     padding: 0 2em 0 2em;
+    transform: translateZ(0);
+
 
     transition: background 1s;
     -webkit-transition: background 1s;

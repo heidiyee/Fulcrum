@@ -74,7 +74,6 @@ var navReset = function() {
     $(window).resize(function() {
         var windowWidth = $(window).width();
         if (windowWidth > "1050") {
-            console.log("I hate IE");
             $("#first-level").css("left", "0");
             $(".second-level").css("left", "0");
             if($("#nav-icon").hasClass("open")) {
